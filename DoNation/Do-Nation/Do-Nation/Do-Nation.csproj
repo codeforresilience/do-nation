@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.props" Condition="Exists('..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.props')" />
+  <Import Project="..\packages\sqlite-net-wp8.3.8.3.100\build\windowsphone8\sqlite-net-wp8.props" Condition="Exists('..\packages\sqlite-net-wp8.3.8.3.100\build\windowsphone8\sqlite-net-wp8.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Do_Nation</RootNamespace>
+    <AssemblyName>Do-Nation</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Do_Nation_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Do_Nation.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="addDonationV2.xaml.cs">
+      <DependentUpon>addDonationV2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinateConverter.cs" />
+    <Compile Include="DonationList.xaml.cs">
+      <DependentUpon>DonationList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DonationPage.xaml.cs">
+      <DependentUpon>DonationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccount.xaml.cs">
+      <DependentUpon>EditAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="itemListStackPanel.cs" />
+    <Compile Include="ListOfOrgs.xaml.cs">
+      <DependentUpon>ListOfOrgs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="mydonations.xaml.cs">
+      <DependentUpon>mydonations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="myPickUpList.xaml.cs">
+      <DependentUpon>myPickUpList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="myPickUpListInfoPanel.cs" />
+    <Compile Include="myPickups.xaml.cs">
+      <DependentUpon>myPickups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="myVolunteers.xaml.cs">
+      <DependentUpon>myVolunteers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="noneChild.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="Objects\Accounts.cs" />
+    <Compile Include="Objects\Categories.cs" />
+    <Compile Include="GetReliefGoodImg.cs" />
+    <Compile Include="Objects\Item.cs" />
+    <Compile Include="Objects\Organization.cs" />
+    <Compile Include="Objects\OrganizationKeyList.cs" />
+    <Compile Include="Objects\Post.cs" />
+    <Compile Include="OrgAccount.cs" />
+    <Compile Include="OrganizationKeyList.cs" />
+    <Compile Include="OrgKeys.xaml.cs">
+      <DependentUpon>OrgKeys.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrgPage.xaml.cs">
+      <DependentUpon>OrgPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrgPost.cs" />
+    <Compile Include="OrgPostForm.xaml.cs">
+      <DependentUpon>OrgPostForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PanoramaMenuPage.xaml.cs">
+      <DependentUpon>PanoramaMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PickupPage.xaml.cs">
+      <DependentUpon>PickupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs" />
+    <Compile Include="postStackPanel.cs" />
+    <Compile Include="PostSuccess.xaml.cs">
+      <DependentUpon>PostSuccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterSelectAPlayerPage.xaml.cs">
+      <DependentUpon>RegisterSelectAPlayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AppResources.Designer.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="addDonationV2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DonationList.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DonationPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditAccount.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ListOfOrgs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="mydonations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="myPickUpList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="myPickups.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="myVolunteers.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OrgKeys.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OrgPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OrgPostForm.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PanoramaMenuPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PickupPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostSuccess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RegisterSelectAPlayerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AppBar\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\refresh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\ALEO-BOLD.OTF" />
+    <Content Include="Assets\Fonts\ALEO-ITALIC.OTF" />
+    <Content Include="Assets\Fonts\ALEO-LIGHT.OTF" />
+    <Content Include="Assets\Fonts\ALEO-REGULAR.OTF" />
+    <Content Include="Assets\icons_goods\cannedGood.png" />
+    <Content Include="Assets\icons_goods\cannedGooddis.png" />
+    <Content Include="Assets\icons_goods\cannedGoodpressed.png" />
+    <Content Include="Assets\icons_goods\medicalSupplies.png" />
+    <Content Include="Assets\icons_goods\medicalSuppliesdis.png" />
+    <Content Include="Assets\icons_goods\medicalSuppliespressed.png" />
+    <Content Include="Assets\icons_goods\milk.png" />
+    <Content Include="Assets\icons_goods\milkdis.png" />
+    <Content Include="Assets\icons_goods\milkpressed.png" />
+    <Content Include="Assets\icons_goods\noodle.png" />
+    <Content Include="Assets\icons_goods\noodledis.png" />
+    <Content Include="Assets\icons_goods\noodlepressed.png" />
+    <Content Include="Assets\icons_goods\others.png" />
+    <Content Include="Assets\icons_goods\readytoeat.png" />
+    <Content Include="Assets\icons_goods\readytoeatdis.png" />
+    <Content Include="Assets\icons_goods\readytoeatpressed.png" />
+    <Content Include="Assets\icons_goods\rice.png" />
+    <Content Include="Assets\icons_goods\ricedis.png" />
+    <Content Include="Assets\icons_goods\ricepressed.png" />
+    <Content Include="Assets\icons_goods\shirt.png" />
+    <Content Include="Assets\icons_goods\shirtdis.png" />
+    <Content Include="Assets\icons_goods\shirtpressed.png" />
+    <Content Include="Assets\icons_goods\soap.png" />
+    <Content Include="Assets\icons_goods\soapdis.png" />
+    <Content Include="Assets\icons_goods\soappressed.png" />
+    <Content Include="Assets\icons_goods\tools.png" />
+    <Content Include="Assets\icons_goods\toolsdis.png" />
+    <Content Include="Assets\icons_goods\toolspressed.png" />
+    <Content Include="Assets\icons_goods\utensils.png" />
+    <Content Include="Assets\icons_goods\utensilsdis.png" />
+    <Content Include="Assets\icons_goods\utensilspressed.png" />
+    <Content Include="Assets\icons_goods\vehicle.png" />
+    <Content Include="Assets\icons_goods\vehicledis.png" />
+    <Content Include="Assets\icons_goods\vehiclepressed.png" />
+    <Content Include="Assets\icons_goods\water.png" />
+    <Content Include="Assets\icons_goods\waterdis.png" />
+    <Content Include="Assets\icons_goods\waterpressed.png" />
+    <Content Include="Assets\menuBtns\myPickUps.png" />
+    <Content Include="Assets\menuBtns\myPickUps2.png" />
+    <Content Include="Assets\menuBtns\myVols.png" />
+    <Content Include="Assets\menuBtns\myVols2.png" />
+    <Content Include="Assets\menuBtns\Thumbs.db" />
+    <Content Include="Assets\nimated\0.png" />
+    <Content Include="Assets\nimated\heart.png" />
+    <Content Include="Assets\postorgpostIcon\Thumbs.db" />
+    <Content Include="Assets\nimated\Thumbs.db" />
+    <Content Include="Assets\icons_goods\Thumbs.db" />
+    <None Include="NuGet.targets" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\AppBar\landmarks.png" />
+    <Content Include="Assets\AppBar\location.png" />
+    <Content Include="Assets\AppBar\zoomin.png" />
+    <Content Include="Assets\AppBar\zoomout.png" />
+    <Content Include="Assets\ApplicationIcon.png" />
+    <Content Include="Assets\menuBtns\edituser.png" />
+    <Content Include="Assets\menuBtns\edituser2.png" />
+    <Content Include="Assets\menuBtns\orgkey.png" />
+    <Content Include="Assets\menuBtns\orgkey2.png" />
+    <Content Include="Assets\postorgpostIcon\annuncement.png" />
+    <Content Include="Assets\postorgpostIcon\annuncement2.png" />
+    <Content Include="Assets\postorgpostIcon\request.png" />
+    <Content Include="Assets\postorgpostIcon\request2.png" />
+    <Content Include="Assets\postorgpostIcon\update.png" />
+    <Content Include="Assets\postorgpostIcon\update2.png" />
+    <Content Include="Assets\postorgpostIcon\warning.png" />
+    <Content Include="Assets\postorgpostIcon\warning2.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png" />
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png" />
+    <Content Include="Assets\Tiles\IconicTileSmall.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\menuBtns\donations.png" />
+    <Content Include="Assets\menuBtns\donations2.png" />
+    <Content Include="Assets\menuBtns\icons.png" />
+    <Content Include="Assets\menuBtns\icons2.png" />
+    <Content Include="Assets\menuBtns\orgs.png" />
+    <Content Include="Assets\menuBtns\orgs2.png" />
+    <Content Include="Assets\menuBtns\pickup.png" />
+    <Content Include="Assets\menuBtns\pickup2.png" />
+    <Content Include="Assets\menuBtns\post.png" />
+    <Content Include="Assets\menuBtns\post2.png" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile">
+      <HintPath>..\packages\WindowsAzure.MobileServices.1.1.4\lib\wp8\Microsoft.WindowsAzure.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile.Ext">
+      <HintPath>..\packages\WindowsAzure.MobileServices.1.1.4\lib\wp8\Microsoft.WindowsAzure.Mobile.Ext.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile.UI">
+      <HintPath>..\packages\WindowsAzure.MobileServices.1.1.4\lib\wp8\Microsoft.WindowsAzure.Mobile.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sqlite">
+      <HintPath>..\packages\sqlite-net-wp8.3.8.4.3\lib\windowsphone8\Sqlite.winmd</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="..\packages\sqlite-net-wp8.3.8.3.100\build\windowsphone8\sqlite-net-wp8.targets" Condition="Exists('..\packages\sqlite-net-wp8.3.8.3.100\build\windowsphone8\sqlite-net-wp8.targets')" />
+  <Import Project="..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets" Condition="Exists('..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets')" />
+</Project>

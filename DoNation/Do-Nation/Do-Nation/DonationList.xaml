@@ -1,0 +1,173 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Do_Nation.DonationList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+	<phone:PhoneApplicationPage.Resources>
+		<Storyboard x:Name="moreDets1">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="moreDets">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="337">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseInOut" Amplitude="0"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="button">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="More Details"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="Less Details"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Name="lessDets">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="moreDets">
+				<EasingDoubleKeyFrame KeyTime="0" Value="337"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseInOut" Amplitude="0"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="button">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="Less Details"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="More Details"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+	</phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FF57B7F7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Donation List" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        <Grid Margin="12,0" Grid.Row="1">
+        	<ScrollViewer HorizontalAlignment="Left" Height="634" VerticalAlignment="Top" Width="456" BorderThickness="0">
+        		<StackPanel x:Name="donationList" Width="456">
+        			<StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="427" Background="#FF3D7391" Margin="10,0,0,20">
+        				<Grid>
+        					<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="NEW" FontSize="29.333" Foreground="#FFB9F134" Margin="10,5,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        					<TextBlock TextWrapping="Wrap" Text="Office of Queson City" FontSize="20" Foreground="#FFBEE5FF" Margin="0,5,20,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        				</Grid>
+        				<StackPanel Orientation="Horizontal" Margin="0,-5,0,-15">
+        					<StackPanel x:Name="col1" Margin="12,10,0,10" Width="196" VerticalAlignment="Top" HorizontalAlignment="Center">
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFC0E666" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Assets/postorgpostIcon/annuncement.png" Margin="5,5,0,5"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFD1EC93" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="87"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        					</StackPanel>
+        					<StackPanel x:Name="col2" Margin="12,10,0,10" Width="196" VerticalAlignment="Top" HorizontalAlignment="Center">
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFC0E666" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="87"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        					</StackPanel>
+        				</StackPanel>
+        				<TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" FontSize="16" Foreground="#FFA4D7F9" Margin="0,6,10,0" VerticalAlignment="Top">
+        					<Run Text="Donated by"/>
+        					<Run Text=":"/>
+        					<Run Text=" Mark"/>
+        				</TextBlock>
+        				<ScrollViewer x:Name="moreDets" Height="337">
+        					<StackPanel Orientation="Vertical" Height="337" Width="427">
+        						<StackPanel VerticalAlignment="Bottom">
+        							<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Time Available" VerticalAlignment="Top" Margin="10,0,0,-5" Width="407" Foreground="#FF8EF1DF" FontSize="18.667"/>
+        							<TextBlock x:Name="availableTime" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="26,0,0,10" Width="391" Foreground="#FF8EF1DF" FontSize="32"/>
+        						</StackPanel>
+        						<StackPanel VerticalAlignment="Bottom">
+        							<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Special Instruction" VerticalAlignment="Top" Margin="10,0,0,-5" Width="407" Foreground="#FF8EF1DF" FontSize="18.667"/>
+        							<TextBlock x:Name="specialInstruction" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="26,0,0,10" Width="391" Foreground="#FF8EF1DF" FontSize="26.667"/>
+        						</StackPanel>
+        						<StackPanel VerticalAlignment="Bottom">
+        							<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Location" VerticalAlignment="Top" Margin="10,0,0,-5" Width="407" Foreground="#FF8EF1DF" FontSize="18.667"/>
+        							<TextBlock x:Name="location" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="26,0,0,10" Width="391" Foreground="#FF8EF1DF" FontSize="26.667"/>
+        						</StackPanel>
+        						<StackPanel VerticalAlignment="Bottom">
+        							<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Contact no:" VerticalAlignment="Top" Margin="10,0,0,-5" Width="407" Foreground="#FF8EF1DF" FontSize="18.667"/>
+        							<TextBlock x:Name="contactNum" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="26,0,0,10" Width="391" Foreground="#FF8EF1DF" FontSize="26.667" Text=""/>
+        						</StackPanel>
+        						<StackPanel VerticalAlignment="Bottom">
+        							<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Margin="10,0,0,-5" Width="407" Foreground="#FF8EF1DF" FontSize="18.667"/>
+        							<TextBlock x:Name="email" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="26,0,0,10" Width="391" Foreground="#FF8EF1DF" FontSize="26.667" Text=""/>
+        						</StackPanel>
+        					</StackPanel>
+        				</ScrollViewer>
+        				<Button x:Name="button" Content="More Details" BorderThickness="2" Background="#FF104061" VerticalAlignment="Top" BorderBrush="#FF0C2536" Margin="0,-4,0,0"/>
+        			</StackPanel>
+        			<StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="427" Background="#FF52A6DE" Margin="10,0,0,20">
+        				<Grid>
+        					<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="PENDING" FontSize="29.333" Foreground="#FF1F5174" Margin="10,5,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        					<TextBlock TextWrapping="Wrap" Text="Office of Queson City" FontSize="20" Foreground="#FF1F5174" Margin="0,5,20,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        				</Grid>
+        				<StackPanel Orientation="Horizontal" Margin="0,-5,0,-15">
+        					<StackPanel x:Name="col3" Margin="12,10,0,10" Width="196" VerticalAlignment="Top" HorizontalAlignment="Center">
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFC0E666" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Assets/postorgpostIcon/annuncement.png" Margin="5,5,0,5"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFD1EC93" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="87"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFC0E666" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="87"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        					</StackPanel>
+        					<StackPanel x:Name="col4" Margin="12,10,0,10" Width="196" VerticalAlignment="Top" HorizontalAlignment="Center">
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFC0E666" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="87"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFD1EC93" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="87"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        						<Grid Width="196" VerticalAlignment="Top" Height="68" Background="#FFC0E666" Margin="0,0,0,5">
+        							<Image HorizontalAlignment="Left" Height="68" VerticalAlignment="Top" Width="87"/>
+        							<TextBlock HorizontalAlignment="Left" Margin="92,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16" Text="Food:" Foreground="#FF0B5716"/>
+        							<TextBlock HorizontalAlignment="Right" Margin="0,21,9,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" FontSize="29.333" Foreground="#FF0B5716"/>
+        						</Grid>
+        					</StackPanel>
+        				</StackPanel>
+        				<TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" FontSize="12" Foreground="#FF1F5174" Margin="0,6,10,0" VerticalAlignment="Top" Width="97">
+        					<Run Text="Donated by"/>
+        					<Run Text=":"/>
+        					<Run Text=" Mark"/>
+        				</TextBlock>
+        				<Button Content="View Details" BorderThickness="2" Background="#FF104061" VerticalAlignment="Top" BorderBrush="#FF0C2536" Margin="0,-4,0,0"/>
+        			</StackPanel>
+        		</StackPanel>
+        	</ScrollViewer>
+        </Grid>
+        <ProgressBar x:Name="loadingBar" Height="10" VerticalAlignment="Center" Width="100" IsIndeterminate="True" Grid.Row="1" Margin="0,-168,0,0" Background="#FFF5F8FA"/>
+
+        <!--ContentPanel - place additional content here-->
+    </Grid>
+
+</phone:PhoneApplicationPage>

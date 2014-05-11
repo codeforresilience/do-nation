@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Do-Nation", "Do-Nation\Do-Nation.csproj", "{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DC834C4F-C0A4-47D6-903C-6081C4A1D3DC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://zeroh729.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Do-Nation\\Do-Nation.csproj
+		SccProjectName1 = Do-Nation
+		SccLocalPath1 = Do-Nation
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|Any CPU.Build.0 = Debug|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|ARM.Build.0 = Debug|ARM
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|ARM.Deploy.0 = Debug|ARM
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|x86.ActiveCfg = Debug|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|x86.Build.0 = Debug|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Debug|x86.Deploy.0 = Debug|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|ARM.ActiveCfg = Release|ARM
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|ARM.Build.0 = Release|ARM
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|ARM.Deploy.0 = Release|ARM
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|x86.ActiveCfg = Release|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|x86.Build.0 = Release|x86
+		{F87249BE-0B13-4135-8957-CB0BB1B0FCD9}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
